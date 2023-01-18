@@ -11,7 +11,9 @@ import time
 #para instalar el modulo easygui simplemente:
 #pip3 install easygui
 # o bien py -m pip install easygui
-import easygui
+
+#import easygui
+from tkinter import messagebox
 import lock
 import json
 
@@ -45,8 +47,9 @@ def executeChallenge():
     # pregunta si el usuario tiene movil con capacidad foto
     # -----------------------------------------------------
     #textos en español, aunque podrian ser parametros adicionales del challenge
-    capable=easygui.ynbox(msg='¿Tienes un movil con bluetooth activo y \
-emparejado con tu PC con capacidad GPS?', choices=("Yes","Not"))
+    #capable=easygui.ynbox(msg='¿Tienes un movil con bluetooth activo y emparejado con tu PC con capacidad GPS?', choices=("Yes","Not"))
+    capable=messagebox.askyesno('challenge MM: RGB','¿Tienes un movil con bluetooth activo emparejado con tu PC con capacidad environment?')
+    
     print (capable)
 
     if (capable==False):
@@ -60,7 +63,8 @@ emparejado con tu PC con capacidad GPS?', choices=("Yes","Not"))
     
     #popup msgbox pidiendo interaccion
     #---------------------------------
-    output = easygui.msgbox(props_dict["interactionText"], "challenge MM: GPS")
+    #output = easygui.msgbox(props_dict["interactionText"], "challenge MM: ENVIRONMENT")
+    output = messagebox.showinfo("challenge MM: ENVIRONMENT",props_dict["interactionText"])
 
     
     
