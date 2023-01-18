@@ -17,3 +17,17 @@ el fichero de captura se debe llamar "capture.env".
 
 Hay una variable en el challenge  llamada **"DEBUG_MODE"** que la puedes cambiar a True o False. En caso True en lugar del fichero capture.env se usa test.env y ademas no se borra el fichero capture.env despues de procesar. 
 
+ejemplo de config json
+```
+{
+"FileName": "challenge_loader_python.dll",
+"Description": "check environmen",
+"Props": {
+  "module_python": "environment",
+  "validity_time": 3600,
+  "refresh_time": 10,
+  "interactionText": "Por favor haz una captura de datos de environment",
+  },
+"Requirements": "environment sensors" 
+}
+```
