@@ -1,0 +1,11 @@
+{
+"FileName": "challenge_loader_python.dll",
+"Description": "check location",
+"Props": {
+  "module_python": "environment",
+  "validity_time": 3600,
+  "refresh_time": 10,
+  "interactionText": "Por favor haz una captura de datos de environment",
+  },
+"Requirements": "location sensors" 
+}
