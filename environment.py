@@ -47,7 +47,7 @@ def executeChallenge():
     # pregunta si el usuario tiene movil con capacidad foto
     # -----------------------------------------------------
     #textos en español, aunque podrian ser parametros adicionales del challenge
-    #capable=easygui.ynbox(msg='¿Tienes un movil con bluetooth activo y emparejado con tu PC con capacidad GPS?', choices=("Yes","Not"))
+    #capable=easygui.ynbox(msg='¿Tienes un movil con bluetooth activo y emparejado con tu PC con capacidad environment?', choices=("Yes","Not"))
     capable=messagebox.askyesno('challenge MM: RGB','¿Tienes un movil con bluetooth activo emparejado a tu PC con capacidad environment?')
     
     print (capable)
@@ -68,9 +68,9 @@ def executeChallenge():
 
     
     
-    # lectura del fichero capture.geo
+    # lectura del fichero capture.env
     #-------------------------------
-    # se supone que el usuario ha depositado un .geo usando bluetooth
+    # se supone que el usuario ha depositado un .env usando bluetooth
     # el nombre del fichero puede ser siempre el mismo, fijado por el proxy bluetooth.
     # aqui vamos a "forzar" el nombre del fichero para pruebas
     filename="capture.env"
@@ -93,7 +93,7 @@ def executeChallenge():
    
 
     
-    # una vez consumida, podemos borrar la captura (fichero "capture.geo")
+    # una vez consumida, podemos borrar la captura (fichero "capture.env")
     if (DEBUG_MODE==False):
         if os.path.exists(folder+"/"+filename):    
             os.remove(folder+"/"+filename)
@@ -106,7 +106,7 @@ def executeChallenge():
     
     #procesamiento
     # averigua si la altura esta en un rango concreto
-    temp=envdata["temperature"] # primera toma de GPS, componente alt
+    temp=envdata["temperature"] # primera toma de environment, componente temperature
     cuantized_temp=float(temp)
     cuantized_temp=int(temp/5.0)
     
