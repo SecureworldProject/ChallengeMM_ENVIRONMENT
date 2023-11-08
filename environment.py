@@ -48,7 +48,7 @@ def executeChallenge():
     # -----------------------------------------------------
     #textos en español, aunque podrian ser parametros adicionales del challenge
     #capable=easygui.ynbox(msg='¿Tienes un movil con bluetooth activo y emparejado con tu PC con capacidad environment?', choices=("Yes","Not"))
-    capable=messagebox.askyesno('challenge MM: RGB','¿Tienes un movil con bluetooth activo emparejado a tu PC con capacidad environment?')
+    capable=messagebox.askyesno('challenge MM: ENVIRONMENT','¿Tienes un movil con bluetooth activo emparejado a tu PC con capacidad environment?')
     
     print (capable)
 
